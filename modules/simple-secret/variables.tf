@@ -58,7 +58,7 @@ variable "user_managed_replication" {
   EOT
   type = list(object({
     location     = string,
-    kms_key_name = string,
+    kms_key_name = optional(string),
   }))
   default = []
 }
